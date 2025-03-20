@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define CSS variables for light mode */
+:root {
+  --background: 0 0% 100%; /* white */
+  --foreground: 222.2 84% 4.9%; /* slate-900 */
+  --card: 0 0% 100%; /* white */
+  --card-foreground: 222.2 84% 4.9%; /* slate-900 */
+  --popover: 0 0% 100%; /* white */
+  --popover-foreground: 222.2 84% 4.9%; /* slate-900 */
+  --primary: 222.2 47.4% 11.2%; /* slate-800 */
+  --primary-foreground: 210 40% 98%; /* slate-50 */
+  --secondary: 210 40% 96.1%; /* slate-100 */
+  --secondary-foreground: 222.2 47.4% 11.2%; /* slate-800 */
+  --muted: 210 40% 96.1%; /* slate-100 */
+  --muted-foreground: 215.4 16.3% 46.9%; /* slate-500 */
+  --accent: 210 40% 96.1%; /* slate-100 */
+  --accent-foreground: 222.2 47.4% 11.2%; /* slate-800 */
+  --destructive: 0 84.2% 60.2%; /* red-500 */
+  --destructive-foreground: 210 40% 98%; /* slate-50 */
+  --border: 214.3 31.8% 91.4%; /* slate-200 */
+  --input: 214.3 31.8% 91.4%; /* slate-200 */
+  --ring: 222.2 84% 4.9%; /* slate-900 */
+  --radius: 0.5rem;
+  color-scheme: light;
+}
+
+/* Define CSS variables for dark mode */
+.dark {
+  --background: 240 28% 14%; /* #1A1A2E */
+  --foreground: 0 0% 98%; /* Almost white for text readability */
+  --card: 240 28% 20%; /* Slightly lighter than background for contrast */
+  --card-foreground: 0 0% 98%;
+  --popover: 240 28% 20%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 210 40% 98%; /* Keep as slate-50 */
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 240 28% 30%; /* Adjusted to match hue */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 28% 30%;
+  --muted-foreground: 240 28% 70%; /* Lighter for muted text */
+  --accent: 240 28% 30%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 28% 30%;
+  --input: 240 28% 30%;
+  --ring: 240 28% 50%; /* Adjusted for consistency */
+  color-scheme: dark;
+}
+
+/* Custom class for landing page gradient */
+.landing-page {
+  background-image: linear-gradient(to bottom, hsl(var(--background)), hsla(var(--background), 0.8));
+}
+
+/* Set base styles for html and body */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add spacing between main sections */
+main > * + * {
+  margin-top: 2rem;
+}
